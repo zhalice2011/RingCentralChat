@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import WeChatPanelContent from './WeChatPanelContent'
 import WeChatPanelFooter from './WeChatPanelFooter'
 import WeChatPanelTitle from './WeChatPanelTitle'
-import Button from '../common/Button'
-import Icon from '../common/Icon'
 
 import mockData from '../../mock/mockData'
 
