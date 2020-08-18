@@ -1,13 +1,12 @@
 import React, { ReactElement } from 'react'
 
 interface IProps {
-
 }
 
-export default function Avatar (props: IProps): ReactElement {
+export default function MSGLink (props: IProps): ReactElement {
     const {  } = props
 
     return (
-        <div></div>
+        <div className="flex1"></div>
     )
 }

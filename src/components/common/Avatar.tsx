@@ -1,13 +1,20 @@
 import React, { ReactElement } from 'react'
+import { IMessage } from '../messages/type'
+import styled from 'styled-components'
 
-interface IProps {
+const Wrapper = styled.div`
 
-}
+`;
 
-export default function Avatar (props: IProps): ReactElement {
-    const {  } = props
+export default function Avatar (props: IMessage): ReactElement {
+    const { author } = props
+    const bgStyle = author.thumbnail ? {} :  { background: '#fff' }
 
     return (
-        <div></div>
+        <Wrapper>
+            <div className="row-flex-center jc-center" style={{ height: 50, width: 50, borderRadius: '5px', ...bgStyle }}>
+                { author.thumbnail ? <img src={author.thumbnail}/> : author.name.substring(0, 1) }
+            </div>
+        </Wrapper>
     )
 }

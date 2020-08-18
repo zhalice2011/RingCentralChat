@@ -1,13 +1,20 @@
 import React, { ReactElement } from 'react'
+import { IMessage } from '../messages/type'
+import MSGContainer from '../messages/MSGContainer'
+import { getTargetMsgClass } from '../messages/index'
 
 interface IProps {
-
+    messages: Array<IMessage>
 }
 
-export default function Avatar (props: IProps): ReactElement {
-    const {  } = props
+export default function WeChatPanelContent (props: IProps): ReactElement {
+    const { messages } = props
 
     return (
-        <div></div>
+        <>
+            {messages.map(message => {
+                return <MSGContainer key={`${message.id}`} {...message} />
+            })}
+        </>
     )
 }
